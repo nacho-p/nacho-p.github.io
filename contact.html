@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/8097c5ca2f.js" crossorigin="anonymous"></script>
+    <title>Contacto</title>
+</head>
+<body id="app">
+    <header>
+        <h1>Nachopedia</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <a href="login.html"><i class="fa-solid fa-user"></i></a>
+    </header>
+    <main>
+        <div class="contact-form">
+            <form id="form" target="_blank" action="index.html" method="get">
+                <div class="titulo">Dejanos tu mensaje.</div>
+                <div class="campos">
+                    <label for="nombre">Nombre: <span class="error"></span></label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Introducí tu nombre.">
+                </div>
+                <div class="campos">
+                    <label for="apellido">Apellido: <span class="error"></span></label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Introducí tu apellido.">
+                </div>
+                <div class="campos">
+                    <label for="email">E-mail: <span class="error"></span></label>
+                    <input type="text" name="email" id="email" placeholder="Introducí tu correo electronico.">
+                </div>
+                <div class="mensaje">
+                    <label for="mensaje">Mensaje: <span class="error"></span></label>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <button class="btn" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Nachopedia - Todos los derechos reservados 2022.</p>
+    </footer>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
