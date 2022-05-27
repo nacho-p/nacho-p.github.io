@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f1ff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* maquetacion con Grid */
+
+#app {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        'header'
+        'main'
+        'footer';
+}
+
+#app > header {
+    grid-area: header;
+}
+
+#app > main {
+    grid-area: main;
+}
+
+#app > footer {
+    grid-area: footer;
+    justify-content: center;
+}
+
+/* nav bar */
+
+header, footer {
+    background-color: teal;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 3%;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 50px;
+}
+
+.nav-links a:hover {
+    color: lightseagreen;
+}
+
+/* Galeria */
+
+.row  {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Formularios de contacto, registro y login */
+
+.titulo {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: block;
+    max-width: 25em;
+    padding: 25px;
+    margin: 2em auto;
+    border-radius: 8px;
+    color: white;
+    background-color: teal;
+    box-shadow: 1px 5px 13px black;
+}
+
+.contact-form p {
+    text-align: center;
+}
+
+.contact-form a {
+    text-decoration: none;
+}
+
+.contact-form a:hover {
+    text-decoration: underline;
+}
+
+.campos, .boton-submit {
+    height: 3em;
+}
+
+form div input {
+    height: 2.5em;
+    width: 100%;
+    border-radius: 8px;
+    padding: 0.5em;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form div {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+input:focus, textarea:focus {
+    border: 2px solid lightseagreen;
+}
+
+.mensaje textarea {
+    min-height: 8vw;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    border-radius: 8px;
+    padding: 0.7em;
+}
+
+.btn {
+    text-align: center;
+    padding: 9px;
+    background-color: lightseagreen;
+    border: none;
+    color: white;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.btn:hover {
+    transition: transform 125ms;
+    transform: translateY(-5px);
+    background-color: aqua;
+}
+
+.error {
+    float: right;
+    font-size: 14.5px;
+    color: red;
+    margin-top: 5px;
+}
+
+/* Home y About*/
+
+.intro {
+    margin: 10px auto;
+}
+
+.centrar {
+    margin: 10px 50%;
+}
+
+.text {
+    margin: 1em;
+}
+
+.mapa {
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 1px 5px 13px black;
+}
+
+/* media queries */
+
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+    .column-map {
+        flex:  100%;
+        max-width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .mapa {
+        width: 100%;
+    }
+}
